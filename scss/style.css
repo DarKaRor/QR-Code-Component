@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(359deg);
+            transform: rotateY(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(359deg);
+            transform: rotateY(359deg);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes fade-up {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #d6e2f0;
+  color: #7b879d;
+  font-family: "Outfit", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.15em;
+}
+
+.attribution {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.attribution a {
+  color: #1f3251;
+  text-decoration: none;
+}
+
+.card {
+  background-color: white;
+  max-width: 324px;
+  padding: 1.15em;
+  border-radius: 1.3em;
+  -webkit-box-shadow: 0 2em 2em 0.1em rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2em 2em 0.1em rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+  -webkit-animation: .5s fade-up ease-in-out;
+          animation: .5s fade-up ease-in-out;
+}
+
+.card__back {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__content {
+  margin: auto;
+  text-align: center;
+  max-width: 260px;
+  width: 100%;
+  padding-top: 1.25em;
+  padding-bottom: 1.1em;
+}
+
+.card__title {
+  color: #1f3251;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  line-height: 1.2em;
+}
+
+.card__text {
+  font-size: 1.03em;
+  margin-bottom: 0.5em;
+}
+
+.spin {
+  -webkit-animation: 0.8s spin ease-in-out;
+          animation: 0.8s spin ease-in-out;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.appear {
+  -webkit-animation: 0.26667s appear ease-in-out;
+          animation: 0.26667s appear ease-in-out;
+  -webkit-animation-delay: 0.36667s;
+          animation-delay: 0.36667s;
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+  .card {
+    padding: 0.8em;
+  }
+  .card__title {
+    font-size: 1.3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
